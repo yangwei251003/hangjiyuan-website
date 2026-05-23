@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { ArrowRight, Cpu, Radio, Shield, Gauge } from 'lucide-react';
+import { ArrowRight, Cpu, Radio, Gauge } from 'lucide-react';
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -114,70 +114,71 @@ export default function Hero() {
     <section
       id="hero-section"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 xl:px-16 overflow-hidden bg-base-dark"
+      className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-4 sm:px-6 md:px-8 xl:px-16 overflow-hidden bg-base-dark"
     >
       {/* 🚀 Main layout container */}
       <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
         {/* 1. Left Typography Content Column */}
-        <div ref={leftColRef} className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
+        <div ref={leftColRef} className="lg:col-span-7 flex flex-col items-start text-left space-y-5">
+          
           {/* Badge */}
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-theme-accent/10 border border-theme-accent/20 text-accent-hero text-sm font-medium tracking-wide">
-            <Cpu className="w-4 h-4 animate-pulse" />
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-theme-accent/10 border border-theme-accent/20 text-theme-accent text-[10px] sm:text-xs font-semibold tracking-wide transition-colors duration-300">
+            <Cpu className="w-3.5 h-3.5 animate-pulse text-theme-accent" />
             <span>背靠“广州科技职业技术大学”专业研发力量</span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none text-white">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white w-full">
             低空经济纪元 <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-hero to-[#70c9ff] glow-text">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-theme-accent to-[#70c9ff] glow-text transition-all duration-300">
               硬核智能起航
             </span>
           </h1>
 
           {/* Paragraph description */}
-          <p className="max-w-xl text-gray-400 text-base md:text-lg font-light leading-relaxed">
+          <p className="max-w-xl text-gray-400 text-xs sm:text-sm md:text-base font-light leading-relaxed">
             航纪元科技深耕粤港澳大湾区核心空域，致力于提供顶级工业无人机全案服务。
             我们整合智能飞行器制造、先进控制算法开发与立体运营保障，打通智能无人系统落地应用的最后一公里。
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <button className="group relative flex items-center gap-2 px-6 py-3.5 bg-accent-hero hover:bg-[#0091e6] text-base-dark font-semibold rounded-lg shadow-glow-sm hover:shadow-glow-md transition-all duration-300">
+          <div className="flex flex-wrap items-center gap-3 pt-2 w-full">
+            <button className="group relative flex items-center gap-2 px-5 py-3 bg-theme-accent hover:opacity-90 text-base-dark font-bold rounded-lg shadow-glow-sm hover:shadow-glow-md transition-all duration-300">
               <span>探索空域</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <button className="flex items-center gap-2 px-6 py-3.5 border border-white/10 hover:border-accent-hero/50 text-white font-medium rounded-lg backdrop-blur-md bg-white/5 hover:bg-accent-hero/5 transition-all duration-300">
-              <span>业务全景</span>
+            <button className="flex items-center gap-2 px-5 py-3 border border-white/10 hover:border-theme-accent/50 text-white font-medium rounded-lg backdrop-blur-md bg-white/5 hover:bg-theme-accent/5 transition-all duration-300">
+              <span>关于我们</span>
             </button>
           </div>
 
           {/* Feature list */}
-          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/5 w-full max-w-lg">
+          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/5 w-full max-w-lg">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white font-mono">100%</span>
-              <span className="text-xs text-gray-500 uppercase tracking-widest mt-1">自主核心算法</span>
+              <span className="text-xl sm:text-2xl font-bold text-white font-mono leading-none">100%</span>
+              <span className="text-[9px] text-gray-500 uppercase tracking-widest mt-1.5 leading-none">自主核心算法</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white font-mono">50+</span>
-              <span className="text-xs text-gray-500 uppercase tracking-widest mt-1">实训基地团队</span>
+              <span className="text-xl sm:text-2xl font-bold text-white font-mono leading-none">50+</span>
+              <span className="text-[9px] text-gray-500 uppercase tracking-widest mt-1.5 leading-none">实训基地团队</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white font-mono">4.0</span>
-              <span className="text-xs text-gray-500 uppercase tracking-widest mt-1">智慧大脑系统</span>
+              <span className="text-xl sm:text-2xl font-bold text-white font-mono leading-none">4.0</span>
+              <span className="text-[9px] text-gray-500 uppercase tracking-widest mt-1.5 leading-none">智慧大脑系统</span>
             </div>
           </div>
         </div>
 
         {/* 2. Right Visual Graphics Column */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-8">
+        <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-8 w-full">
           
           {/* Logo Showcase with Neon Glow & Swoosh Animation */}
-          <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+          <div className="relative w-44 h-44 sm:w-64 sm:h-64 lg:w-85 lg:h-85 flex items-center justify-center">
             {/* Background glowing rings */}
-            <div className="absolute w-48 h-48 rounded-full bg-accent-hero/5 blur-2xl animate-pulse" />
-            <div className="absolute w-64 h-64 rounded-full border border-accent-hero/10 scale-95" />
-            <div className="absolute w-80 h-80 rounded-full border border-accent-hero/5 scale-90 animate-spin" style={{ animationDuration: '40s' }} />
+            <div className="absolute w-full h-full rounded-full bg-theme-accent/5 blur-2xl animate-pulse transition-colors duration-300" />
+            <div className="absolute w-[80%] h-[80%] rounded-full border border-theme-accent/10 transition-colors duration-300" />
+            <div className="absolute w-[110%] h-[110%] rounded-full border border-theme-accent/5 animate-spin transition-colors duration-300" style={{ animationDuration: '40s' }} />
 
             <svg
               viewBox="0 0 500 500"
@@ -240,7 +241,7 @@ export default function Hero() {
               {['航', '纪', '元'].map((char, idx) => (
                 <span
                   key={idx}
-                  className="letter-anim text-2xl md:text-3xl font-extrabold tracking-widest text-white font-sans opacity-0"
+                  className="letter-anim text-xl md:text-2xl font-extrabold tracking-widest text-white font-sans opacity-0"
                 >
                   {char}
                 </span>
@@ -250,7 +251,7 @@ export default function Hero() {
               {['A', 'E', 'R', 'O', ' ', 'E', 'R', 'A'].map((char, idx) => (
                 <span
                   key={idx}
-                  className="letter-anim text-xs font-semibold tracking-[0.4em] text-accent-hero font-mono opacity-0"
+                  className="letter-anim text-[10px] font-semibold tracking-[0.4em] text-theme-accent font-mono opacity-0 transition-colors duration-300"
                 >
                   {char}
                 </span>
@@ -259,18 +260,12 @@ export default function Hero() {
           </div>
 
           {/* 3. Interactive Glassmorphic Telemetry HUD Panel */}
-          {/* 
-            [Unsplash Asset Configuration]:
-            - The background image below utilizes a gorgeous aerial grid of city lights at night.
-            - It acts as a visual representation of low-altitude urban air routes and navigation mesh.
-            - The cool blue hues of the city lights perfectly align with the corporate brand sky-blue.
-          */}
           <div
             ref={dashboardRef}
             className="w-full max-w-sm glass-panel rounded-xl overflow-hidden glow-border border-white/5 relative group"
           >
             {/* Aerial city map background */}
-            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+            <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-25 transition-opacity duration-500">
               <img
                 src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80"
                 alt="Low Altitude Navigation Grid Mesh"
@@ -280,38 +275,38 @@ export default function Hero() {
             </div>
 
             {/* HUD Header */}
-            <div className="relative z-10 px-5 py-4 border-b border-white/10 flex items-center justify-between">
+            <div className="relative z-10 px-4 py-3 border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Radio className="w-4 h-4 text-accent-hero animate-ping" />
-                <span className="text-xs uppercase font-mono tracking-widest text-white">Live Telemetry Link</span>
+                <Radio className="w-3.5 h-3.5 text-theme-accent animate-ping transition-colors duration-300" />
+                <span className="text-[10px] uppercase font-mono tracking-widest text-white">Live Telemetry Link</span>
               </div>
-              <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-accent-hero/10 text-accent-hero border border-accent-hero/20">
+              <span className="px-2 py-0.5 text-[9px] font-mono rounded bg-theme-accent/10 text-theme-accent border border-theme-accent/20 transition-all duration-300">
                 AERO-4.0
               </span>
             </div>
 
             {/* HUD Content Metrics */}
-            <div className="relative z-10 p-5 grid grid-cols-2 gap-4">
+            <div className="relative z-10 p-4 grid grid-cols-2 gap-4">
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-mono tracking-wider text-gray-500">Altitude</span>
-                <span className="text-lg font-bold text-white font-mono mt-0.5 flex items-baseline gap-1">
+                <span className="text-[9px] uppercase font-mono tracking-wider text-gray-500">Altitude</span>
+                <span className="text-base font-bold text-white font-mono mt-0.5 flex items-baseline gap-1">
                   {telemetry.altitude} <span className="text-xs font-normal text-gray-400">m</span>
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-mono tracking-wider text-gray-500">Cruising Speed</span>
-                <span className="text-lg font-bold text-white font-mono mt-0.5 flex items-baseline gap-1">
+                <span className="text-[9px] uppercase font-mono tracking-wider text-gray-500">Cruising Speed</span>
+                <span className="text-base font-bold text-white font-mono mt-0.5 flex items-baseline gap-1">
                   {telemetry.speed} <span className="text-xs font-normal text-gray-400">km/h</span>
                 </span>
               </div>
               <div className="flex flex-col col-span-2 border-t border-white/5 pt-3">
-                <div className="flex justify-between items-center text-[10px] uppercase font-mono text-gray-500 mb-1">
+                <div className="flex justify-between items-center text-[9px] uppercase font-mono text-gray-500 mb-1">
                   <span>Battery cell</span>
                   <span className="text-white font-mono">{telemetry.battery}%</span>
                 </div>
                 <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-accent-hero transition-all duration-500 rounded-full"
+                    className="h-full bg-theme-accent transition-all duration-500 rounded-full"
                     style={{ width: `${telemetry.battery}%` }}
                   />
                 </div>
@@ -319,9 +314,9 @@ export default function Hero() {
             </div>
 
             {/* HUD Status Bar */}
-            <div className="relative z-10 px-5 py-3.5 bg-white/[0.02] border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <div className="relative z-10 px-4 py-3 bg-white/[0.02] border-t border-white/5 flex items-center justify-between text-[10px] font-mono">
               <span className="text-gray-500">Link Signal Strength</span>
-              <span className="text-accent-hero flex items-center gap-1 font-bold">
+              <span className="text-theme-accent flex items-center gap-1 font-bold transition-colors duration-300">
                 <Gauge className="w-3.5 h-3.5" />
                 {telemetry.signal}%
               </span>
