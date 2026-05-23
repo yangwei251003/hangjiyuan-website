@@ -114,7 +114,7 @@ export default function Hero() {
     <section
       id="hero-section"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-4 sm:px-6 md:px-8 xl:px-16 overflow-hidden bg-base-dark"
+      className="relative min-h-screen flex flex-col justify-start lg:justify-center pt-28 lg:pt-20 pb-16 px-4 sm:px-6 md:px-8 xl:px-16 overflow-hidden bg-base-dark"
     >
       {/* 🚀 Main layout container */}
       <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
