@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Base brand colors */
+  --color-base-dark: #030712;
+  --color-base-panel: rgba(11, 19, 41, 0.45);
+  
+  --color-accent-hero: #00a2ff;
+  --color-accent-agri: #10b981;
+  --color-accent-logi: #06b6d4;
+  --color-accent-fpv: #f97316;
+  --color-accent-edu: #e2e8f0;
+
+  /* Dynamic active variables interpolated by GSAP */
+  --theme-accent: var(--color-accent-hero);
+  --theme-accent-rgb: 0, 162, 255;
+  --theme-glow-opacity: 0.15;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-base-dark);
+  color: #f3f4f6;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar for Sci-Fi Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--theme-accent-rgb), 0.25);
+  border-radius: 4px;
+  border: 2px solid var(--color-base-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--theme-accent-rgb), 0.5);
+}
+
+/* Glassmorphism card default styles */
+.glass-panel {
+  background: var(--color-base-panel);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 10px rgba(var(--theme-accent-rgb), 0.5);
+}
+
+.glow-border:hover {
+  border-color: rgba(var(--theme-accent-rgb), 0.5);
+  box-shadow: 0 0 15px rgba(var(--theme-accent-rgb), 0.25);
+}
